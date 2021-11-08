@@ -1,0 +1,54 @@
+// @import url('mobile.css') screen and (max-width: 600px);
+// @import url('desktop.css') screen and (min-width: 601px);
+
+// 最も一般的な記法
+// @media screen and (max-width: 600px) {
+//     @import 'mobile.scss';
+// }
+
+// @media screen and (min-width: 601px) {
+//     @import 'desktop.scss';
+// }
+
+@import 'breakpoints/base';
+@import 'moduls/mixin';
+@import 'moduls/appear';
+@import 'moduls/button';
+@import 'moduls/variables';
+@import 'moduls/hero-slider';
+@import 'moduls/text_animation';
+@import 'moduls/image_slide';
+@import 'moduls/mobile-menu';
+
+
+// スマホの横向き（ランドスケープ）
+@media (min-width: 480px) {
+    @import 'breakpoints/480up';
+}
+
+// ipadなどのタブレット
+@media (min-width: 600px) {
+    @import 'breakpoints/600up';
+}
+
+// タブレットのランドスケープ
+@media (min-width: 960px) {
+    @import 'breakpoints/960up';
+}
+
+// 通常のPCディスプレイ
+@media (min-width: 1280px) {
+    @import 'breakpoints/1280up';
+}
+
+// レディナディスプレイ
+@media (min-resolution: 192dpi),
+        (-webkit-min-device-pixel-ratio: 2) {
+    @import 'breakpoints/2x';
+}
+
+@media print {
+    @import 'breakpoints/print';
+}
+
+
